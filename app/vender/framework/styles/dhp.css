@@ -1,0 +1,39 @@
+.dhp-clickable {
+  cursor: pointer;
+}
+.dhp-dock-top {
+  left: 0;
+  top: 0;
+  right: 0;
+  position: absolute;
+  margin: 0;
+}
+.dhp-dock-right {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  margin: 0;
+}
+.dhp-dock-bottom {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  margin: 0;
+}
+.dhp-dock-left {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  margin: 0;
+}
+.dhp-busy-indicator-small {
+  width: 36px;
+  height: 36px;
+}
+.dhp-busy-indicator-small.dhp-dock-left,
+.dhp-busy-indicator-small.dhp-dock-right {
+  height: auto;
+}

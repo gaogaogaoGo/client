@@ -1,0 +1,758 @@
+.top{
+	position: relative;
+	top: 0;
+	width: 100%;
+	height: 150px;
+	border: 4px solid red; 
+}
+
+.footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 300px;
+	border: 1px solid red; 
+}
+.main {
+	background: #eee;
+	position: initial;
+}
+
+.my_info {
+	height: 65%;
+	width: 60%;
+	margin: 0 auto;
+	margin-top: 40px;
+	background: #f5f7fa;
+	padding: 30px;
+	box-shadow: 6px 6px 3px #888;
+}
+
+
+.my_profile {
+  width: 100%;
+  margin-top: 5%;
+}
+
+label.error {
+    color: #cc5965;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.help-block a {
+	color: #337ab7;
+}
+
+.avatar-btns button { 
+    height: 35px; 
+} 
+
+.avatar-wrapper {
+	height: 200px;
+	width: 200px;
+	border: 1px solid red;
+}
+
+.modal-dialog {
+	width: 30%;
+}
+
+.modal-content {
+	height: 300px;
+}
+
+.wrapper {
+	padding: 20px;
+}
+
+.ibox {
+	padding: 20px;
+}
+
+.ibox-title {
+  border-color: #e7eaec;
+  border-image: none;
+  border-style: solid solid none;
+  border-width: 4px 0px 0;
+  color: inherit;
+  margin-bottom: 0;
+  padding: 14px 15px 7px;
+  min-height: 48px;
+}
+
+.ibox .ibox-content {
+    background-color: #ffffff;
+    color: inherit;
+    padding: 15px 20px 20px 20px;
+    border-color: #e7eaec;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 0px;
+}
+
+form[name="ChangeUserAvatarForm"] {
+	padding: 10px 15px;
+}
+
+a{
+	text-decoration: none;
+	border-color: transparent;
+}
+
+.nav li a:hover {
+	background-color: transparent !important;
+}
+
+a:focus {
+  outline: 0px solid #1baee1; 
+}
+
+.nav-tabs>li>a:hover {
+   border-color: transparent;
+}
+
+// SweetAlert
+// 2014 (c) - Tristan Edwards
+// github.com/t4t5/sweetalert
+
+.sweet-overlay {
+	background-color: rgb(0, 0, 0); /* IE8 */
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)"; /* IE8 */
+	background-color: rgba(black, 0.4);
+
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+
+	display: none;
+	z-index: 10000;
+}
+
+.sweet-alert {
+	$width: 478px;
+	$padding: 17px;
+
+	background-color: white;
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	width: $width;
+	padding: $padding;
+	border-radius: 5px;
+	text-align: center;
+
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-left: -($width/2 + $padding);
+	margin-top: -200px;
+
+	overflow: hidden;
+	display: none;
+	z-index: 99999;
+
+	@media all and (max-width: 540px) {
+		width: auto;
+		margin-left: 0;
+		margin-right: 0;
+
+		left: 15px;
+		right: 15px;
+	}
+
+	h2 {
+		color: #575757;
+		font-size: 30px;
+		text-align: center;
+		font-weight: 600;
+		text-transform: none;
+		position: relative;
+		margin: 25px 0;
+		padding: 0;
+		line-height: 40px;
+		display: block;
+	}
+
+	p {
+		color: #797979;
+		font-size: 16px;
+		text-align: center;
+		font-weight: 300;
+		position: relative;
+		text-align: inherit;
+		float: none;
+		margin: 0;
+		padding: 0;
+		line-height: normal;
+	}
+
+	button {
+		$btnBlue: #AEDEF4;
+		$btnGray: #D0D0D0;
+
+		background-color: $btnBlue;
+		color: white;
+		border: none;
+		box-shadow: none;
+		font-size: 17px;
+		font-weight: 500;
+		-webkit-border-radius: 4px;
+		border-radius: 5px;
+		padding: 10px 32px;
+		margin: 26px 5px 0 5px;
+		cursor: pointer;
+		&:focus {
+			outline: none;
+			box-shadow: 0 0 2px rgba(128, 179, 235, 0.5), inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+		}
+		&:hover {
+			background-color: darken($btnBlue, 3%);
+		}
+		&:active {
+			background-color: darken($btnBlue, 10%);
+		}
+		&.cancel {
+			background-color: $btnGray;
+			&:hover {
+				background-color: darken($btnGray, 3%);
+			}
+			&:active {
+				background-color: darken($btnGray, 10%);
+			}
+			// Cancel button should keep the same style
+			&:focus {
+				box-shadow: rgba(197, 205, 211, 0.8) 0px 0px 2px, rgba(0, 0, 0, 0.0470588) 0px 0px 0px 1px inset !important;
+			}
+		}
+		// Removes selection outline in Firefox
+		&::-moz-focus-inner {
+		  border: 0;
+		}
+	}
+
+	// Only show focus-style when there is multiple choice of actions
+	&[data-has-cancel-button=false] button {
+		box-shadow: none !important;
+	}
+
+
+	.icon {
+		$red: 		#F27474;
+		$orange: 	#F8BB86;
+		$blue: 		#C9DAE1;
+		$green: 	#A5DC86;
+
+		width: 80px;
+		height: 80px;
+		border: 4px solid gray;
+		-webkit-border-radius: 40px;
+		border-radius: 40px;
+		border-radius: 50%;
+		margin: 20px auto;
+		padding: 0;
+		position: relative;
+		box-sizing: content-box;
+
+		&.error {
+			border-color: $red;
+
+			.x-mark {
+				position: relative;
+				display: block;
+			}
+
+			.line {
+				position: absolute;
+				height: 5px;
+				width: 47px;
+				background-color: $red;
+				display: block;
+				top: 37px;
+				border-radius: 2px;
+
+				&.left {
+					-webkit-transform: rotate(45deg);
+    			transform: rotate(45deg);
+    			left: 17px;
+				}
+				&.right {
+					-webkit-transform: rotate(-45deg);
+    			transform: rotate(-45deg);
+    			right: 16px;
+				}
+			}
+		}
+		&.warning {
+			border-color: $orange;
+
+			.body { // Exclamation mark body
+				position: absolute;
+				width: 5px;
+				height: 47px;
+				left: 50%;
+				top: 10px;
+				-webkit-border-radius: 2px;
+				border-radius: 2px;
+				margin-left: -2px;
+				background-color: $orange;
+			}
+			.dot { // Exclamation mark dot
+				position: absolute;
+				width: 7px;
+				height: 7px;
+				-webkit-border-radius: 50%;
+				border-radius: 50%;
+				margin-left: -3px;
+				left: 50%;
+				bottom: 10px;
+				background-color: $orange;
+			}
+		}
+		&.info {
+			border-color: $blue;
+
+			&::before { // i-letter body
+				content: "";
+				position: absolute;
+				width: 5px;
+				height: 29px;
+				left: 50%;
+				bottom: 17px;
+				border-radius: 2px;
+				margin-left: -2px;
+				background-color: $blue;
+			}
+			&::after { // i-letter dot
+				content: "";
+				position: absolute;
+				width: 7px;
+				height: 7px;
+				border-radius: 50%;
+				margin-left: -3px;
+				top: 19px;
+				background-color: $blue;
+			}
+		}
+		&.success {
+			border-color: $green;
+
+			&::before, &::after { // Emulate moving circular line
+				content: '';
+				-webkit-border-radius: 40px;
+				border-radius: 40px;
+				border-radius: 50%;
+			  position: absolute;
+			  width: 60px;
+				height: 120px;
+			  background: white;
+				-webkit-transform: rotate(45deg);
+			  transform: rotate(45deg);
+			}
+			&::before {
+				-webkit-border-radius: 120px 0 0 120px;
+			  border-radius: 120px 0 0 120px;
+			  top: -7px;
+				left: -33px;
+
+			   -webkit-transform: rotate(-45deg);
+			  transform: rotate(-45deg);
+				-webkit-transform-origin: 60px 60px;
+			  transform-origin: 60px 60px;
+			}
+			&::after {
+				-webkit-border-radius: 0 120px 120px 0;
+			  border-radius: 0 120px 120px 0;
+			  top: -11px;
+				left: 30px;
+
+			  -webkit-transform: rotate(-45deg);
+			  transform: rotate(-45deg);
+				-webkit-transform-origin: 0px 60px;
+			  transform-origin: 0px 60px;
+			}
+
+			.placeholder { // Ring
+				width: 80px;
+				height: 80px;
+				border: 4px solid rgba($green, 0.2);
+				-webkit-border-radius: 40px;
+				border-radius: 40px;
+				border-radius: 50%;
+				box-sizing: content-box;
+
+				position: absolute;
+				left: -4px;
+				top: -4px;
+				z-index: 2;
+			}
+
+			.fix {	// Hide corners left from animation
+				width: 5px;
+				height: 90px;
+				background-color: white;
+
+				position: absolute;
+				left: 28px;
+				top: 8px;
+				z-index: 1;
+
+				-webkit-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+			}
+
+			.line {
+				height: 5px;
+				background-color: $green;
+				display: block;
+				border-radius: 2px;
+
+				position: absolute;
+				z-index: 2;
+
+				&.tip {
+					width: 25px;
+
+    			left: 14px;
+					top: 46px;
+
+					-webkit-transform: rotate(45deg);
+    			transform: rotate(45deg);
+				}
+				&.long {
+					width: 47px;
+
+    			right: 8px;
+					top: 38px;
+
+					-webkit-transform: rotate(-45deg);
+    			transform: rotate(-45deg);
+				}
+			}
+		}
+		&.custom {
+			background-size: contain;
+			border-radius: 0;
+			border: none;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+	}
+
+}
+
+/*
+ * Animations
+ */
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  animation: #{$str};
+}
+
+
+// Modal animation
+
+@include keyframes(showSweetAlert) {
+  0% 		{ transform: scale(0.7); 	-webkit-transform: scale(0.7); 	}
+	45% 	{ transform: scale(1.05); -webkit-transform: scale(1.05); }
+	80% 	{ transform: scale(0.95); -webkit-tranform: scale(0.95); 	}
+	100% 	{ transform: scale(1); 		-webkit-transform: scale(1); 		}
+}
+@include keyframes(hideSweetAlert) {
+  0% 		{ transform: scale(1); 		-webkit-transform: scale(1); 		}
+	100% 	{ transform: scale(0.5); 	-webkit-transform: scale(0.5); 	}
+}
+
+.showSweetAlert {
+  @include animation('showSweetAlert 0.3s');
+
+  &[data-animation=none] {
+		@include animation('none');
+	}
+}
+.hideSweetAlert {
+  @include animation('hideSweetAlert 0.2s');
+
+  &[data-animation=none] {
+		@include animation('none');
+	}
+}
+
+
+
+// Success icon animation
+
+@include keyframes(animateSuccessTip) {
+	0%		{ width: 0; 		left: 1px; 		top: 19px; }
+	54%		{ width: 0; 		left: 1px; 		top: 19px; }
+	70%		{ width: 50px; 	left: -8px; 	top: 37px; }
+	84%		{ width: 17px; 	left: 21px; 	top: 48px; }
+	100%	{ width: 25px; 	left: 14px; 	top: 45px; }
+}
+@include keyframes(animateSuccessLong) {
+	0%		{ width: 0; 		right: 46px; 	top: 54px; }
+	65%		{ width: 0; 		right: 46px; 	top: 54px; }
+	84%		{ width: 55px; 	right: 0px; 	top: 35px; }
+	100%	{ width: 47px; 	right: 8px; 	top: 38px; }
+}
+@include keyframes(rotatePlaceholder) {
+	0% 		{ transform: rotate(-45deg); 	-webkit-transform: rotate(-45deg); 	}
+	5% 		{ transform: rotate(-45deg); 	-webkit-transform: rotate(-45deg);		}
+  12% 	{ transform: rotate(-405deg); -webkit-transform: rotate(-405deg);	}
+  100% 	{ transform: rotate(-405deg); -webkit-transform: rotate(-405deg);	}
+}
+
+.animateSuccessTip {
+	@include animation('animateSuccessTip 0.75s');
+}
+.animateSuccessLong {
+	@include animation('animateSuccessLong 0.75s');
+}
+.icon.success.animate::after {
+	@include animation('rotatePlaceholder 4.25s ease-in');
+}
+
+
+// Error icon animation
+
+@include keyframes(animateErrorIcon) {
+	0%		{ transform: rotateX(100deg); -webkit-transform: rotateX(100deg); opacity: 0; }
+  100% 	{ transform: rotateX(0deg); 	-webkit-transform: rotateX(0deg); 	opacity: 1; }
+}
+.animateErrorIcon {
+	@include animation('animateErrorIcon 0.5s');
+}
+@include keyframes(animateXMark) {
+	0% 		{ transform: scale(0.4); 	-webkit-transform: scale(0.4); 	margin-top: 26px;	opacity: 0; }
+	50% 	{ transform: scale(0.4); 	-webkit-transform: scale(0.4); 	margin-top: 26px;	opacity: 0; }
+	80% 	{ transform: scale(1.15); -webkit-transform: scale(1.15); margin-top: -6px; 						}
+	100% 	{ transform: scale(1); 		-webkit-transform: scale(1);		margin-top: 0; 		opacity: 1; }
+}
+.animateXMark {
+	@include animation('animateXMark 0.5s');
+}
+
+@include keyframes(pulseWarning) {
+	0%		{ border-color: #F8D486; }
+	100%	{ border-color: #F8BB86; }
+}
+.pulseWarning {
+	@include animation('pulseWarning 0.75s infinite alternate');
+}
+
+@include keyframes(pulseWarningIns) {
+	0%		{ background-color: #F8D486; }
+	100%	{ background-color: #F8BB86; }
+}
+.pulseWarningIns {
+	@include animation('pulseWarningIns 0.75s infinite alternate');
+}
+
+.toast-title {
+  font-weight: bold;
+}
+.toast-message {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+.toast-message a,
+.toast-message label {
+  color: #ffffff;
+}
+.toast-message a:hover {
+  color: #cccccc;
+  text-decoration: none;
+}
+.toast-close-button {
+  position: relative;
+  right: -0.3em;
+  top: -0.3em;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  -webkit-text-shadow: 0 1px 0 #ffffff;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: 0.8;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  filter: alpha(opacity=80);
+}
+.toast-close-button:hover,
+.toast-close-button:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.4;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  filter: alpha(opacity=40);
+}
+/*Additional properties for button version
+ iOS requires the button element instead of an anchor tag.
+ If you want the anchor version, it requires `href="#"`.*/
+button.toast-close-button {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+.toast-top-center {
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+.toast-bottom-center {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+.toast-top-full-width {
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+.toast-bottom-full-width {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+.toast-top-left {
+  top: 12px;
+  left: 12px;
+}
+.toast-top-right {
+  top: 12px;
+  right: 12px;
+}
+.toast-bottom-right {
+  right: 12px;
+  bottom: 12px;
+}
+.toast-bottom-left {
+  bottom: 12px;
+  left: 12px;
+}
+#toast-container {
+  position: fixed;
+  z-index: 999999;
+  /*overrides*/
+
+}
+#toast-container * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#toast-container > div {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 6px;
+  padding: 15px 15px 15px 50px;
+  width: 300px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+  background-position: 15px center;
+  background-repeat: no-repeat;
+  -moz-box-shadow: 0 0 12px #999999;
+  -webkit-box-shadow: 0 0 12px #999999;
+  box-shadow: 0 0 12px #999999;
+  color: #ffffff;
+  opacity: 0.8;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  filter: alpha(opacity=80);
+}
+#toast-container > :hover {
+  -moz-box-shadow: 0 0 12px #000000;
+  -webkit-box-shadow: 0 0 12px #000000;
+  box-shadow: 0 0 12px #000000;
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: alpha(opacity=100);
+  cursor: pointer;
+}
+#toast-container > .toast-info {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGwSURBVEhLtZa9SgNBEMc9sUxxRcoUKSzSWIhXpFMhhYWFhaBg4yPYiWCXZxBLERsLRS3EQkEfwCKdjWJAwSKCgoKCcudv4O5YLrt7EzgXhiU3/4+b2ckmwVjJSpKkQ6wAi4gwhT+z3wRBcEz0yjSseUTrcRyfsHsXmD0AmbHOC9Ii8VImnuXBPglHpQ5wwSVM7sNnTG7Za4JwDdCjxyAiH3nyA2mtaTJufiDZ5dCaqlItILh1NHatfN5skvjx9Z38m69CgzuXmZgVrPIGE763Jx9qKsRozWYw6xOHdER+nn2KkO+Bb+UV5CBN6WC6QtBgbRVozrahAbmm6HtUsgtPC19tFdxXZYBOfkbmFJ1VaHA1VAHjd0pp70oTZzvR+EVrx2Ygfdsq6eu55BHYR8hlcki+n+kERUFG8BrA0BwjeAv2M8WLQBtcy+SD6fNsmnB3AlBLrgTtVW1c2QN4bVWLATaIS60J2Du5y1TiJgjSBvFVZgTmwCU+dAZFoPxGEEs8nyHC9Bwe2GvEJv2WXZb0vjdyFT4Cxk3e/kIqlOGoVLwwPevpYHT+00T+hWwXDf4AJAOUqWcDhbwAAAAASUVORK5CYII=") !important;
+}
+#toast-container > .toast-error {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHOSURBVEhLrZa/SgNBEMZzh0WKCClSCKaIYOED+AAKeQQLG8HWztLCImBrYadgIdY+gIKNYkBFSwu7CAoqCgkkoGBI/E28PdbLZmeDLgzZzcx83/zZ2SSXC1j9fr+I1Hq93g2yxH4iwM1vkoBWAdxCmpzTxfkN2RcyZNaHFIkSo10+8kgxkXIURV5HGxTmFuc75B2RfQkpxHG8aAgaAFa0tAHqYFfQ7Iwe2yhODk8+J4C7yAoRTWI3w/4klGRgR4lO7Rpn9+gvMyWp+uxFh8+H+ARlgN1nJuJuQAYvNkEnwGFck18Er4q3egEc/oO+mhLdKgRyhdNFiacC0rlOCbhNVz4H9FnAYgDBvU3QIioZlJFLJtsoHYRDfiZoUyIxqCtRpVlANq0EU4dApjrtgezPFad5S19Wgjkc0hNVnuF4HjVA6C7QrSIbylB+oZe3aHgBsqlNqKYH48jXyJKMuAbiyVJ8KzaB3eRc0pg9VwQ4niFryI68qiOi3AbjwdsfnAtk0bCjTLJKr6mrD9g8iq/S/B81hguOMlQTnVyG40wAcjnmgsCNESDrjme7wfftP4P7SP4N3CJZdvzoNyGq2c/HWOXJGsvVg+RA/k2MC/wN6I2YA2Pt8GkAAAAASUVORK5CYII=") !important;
+}
+#toast-container > .toast-success {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADsSURBVEhLY2AYBfQMgf///3P8+/evAIgvA/FsIF+BavYDDWMBGroaSMMBiE8VC7AZDrIFaMFnii3AZTjUgsUUWUDA8OdAH6iQbQEhw4HyGsPEcKBXBIC4ARhex4G4BsjmweU1soIFaGg/WtoFZRIZdEvIMhxkCCjXIVsATV6gFGACs4Rsw0EGgIIH3QJYJgHSARQZDrWAB+jawzgs+Q2UO49D7jnRSRGoEFRILcdmEMWGI0cm0JJ2QpYA1RDvcmzJEWhABhD/pqrL0S0CWuABKgnRki9lLseS7g2AlqwHWQSKH4oKLrILpRGhEQCw2LiRUIa4lwAAAABJRU5ErkJggg==") !important;
+}
+#toast-container > .toast-warning {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGYSURBVEhL5ZSvTsNQFMbXZGICMYGYmJhAQIJAICYQPAACiSDB8AiICQQJT4CqQEwgJvYASAQCiZiYmJhAIBATCARJy+9rTsldd8sKu1M0+dLb057v6/lbq/2rK0mS/TRNj9cWNAKPYIJII7gIxCcQ51cvqID+GIEX8ASG4B1bK5gIZFeQfoJdEXOfgX4QAQg7kH2A65yQ87lyxb27sggkAzAuFhbbg1K2kgCkB1bVwyIR9m2L7PRPIhDUIXgGtyKw575yz3lTNs6X4JXnjV+LKM/m3MydnTbtOKIjtz6VhCBq4vSm3ncdrD2lk0VgUXSVKjVDJXJzijW1RQdsU7F77He8u68koNZTz8Oz5yGa6J3H3lZ0xYgXBK2QymlWWA+RWnYhskLBv2vmE+hBMCtbA7KX5drWyRT/2JsqZ2IvfB9Y4bWDNMFbJRFmC9E74SoS0CqulwjkC0+5bpcV1CZ8NMej4pjy0U+doDQsGyo1hzVJttIjhQ7GnBtRFN1UarUlH8F3xict+HY07rEzoUGPlWcjRFRr4/gChZgc3ZL2d8oAAAAASUVORK5CYII=") !important;
+}
+#toast-container.toast-top-center > div,
+#toast-container.toast-bottom-center > div {
+  width: 300px;
+  margin: auto;
+}
+#toast-container.toast-top-full-width > div,
+#toast-container.toast-bottom-full-width > div {
+  width: 96%;
+  margin: auto;
+}
+.toast {
+  background-color: #030303;
+}
+.toast-success {
+  background-color: #51a351;
+}
+.toast-error {
+  background-color: #bd362f;
+}
+.toast-info {
+  background-color: #2f96b4;
+}
+.toast-warning {
+  background-color: #f89406;
+}
+
+.toast-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: #000000;
+  opacity: 0.4;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  filter: alpha(opacity=40);
+}
+
+/*Responsive Design*/
+@media all and (max-width: 240px) {
+  #toast-container > div {
+    padding: 8px 8px 8px 50px;
+    width: 11em;
+  }
+  #toast-container .toast-close-button {
+    right: -0.2em;
+    top: -0.2em;
+  }
+}
+@media all and (min-width: 241px) and (max-width: 480px) {
+  #toast-container > div {
+    padding: 8px 8px 8px 50px;
+    width: 18em;
+  }
+  #toast-container .toast-close-button {
+    right: -0.2em;
+    top: -0.2em;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 768px) {
+  #toast-container > div {
+    padding: 15px 15px 15px 50px;
+    width: 25em;
+  }
+}

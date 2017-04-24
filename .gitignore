@@ -1,0 +1,15 @@
+node_modules/
+.idea/
+.tmp/
+dist/
+
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.rdb
+*.pdb
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>home index</title>
+	<%- include('../../../_global/common_css.html') %>
+</head>
+<body>
+	<%- include('../../../_global/head.html') %>
+	<img src="/image/default-profile-picture.jpg" alt="">
+	<div class="container">
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label for="exampleInputEmail1">Email address</label>
+				<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email" name="userName">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">Password</label>
+				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+			</div>           
+		 <!--  <button type="submit" class="btn submit btn-default">Submit</button> -->
+		<div class="submit" style="height:40px;width:40px;border:1px solid red;">
+				登录
+		</div>
+		</form>
+	</div>
+ 
+	<%- include('../../../_global/foot.html') %> 
+	<%- include('../../../_global/common_js.html') %> 
+</body>
+</html>
