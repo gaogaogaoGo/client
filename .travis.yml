@@ -12,3 +12,7 @@ script:
 branches:
   only:
     - master
+    
+after_success:
+    - npm prune --production  # 删除devDependencies
+    - tar gulp build   # 打包并压缩代码
